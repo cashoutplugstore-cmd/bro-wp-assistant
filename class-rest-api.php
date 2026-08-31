@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 if (!defined('ABSPATH')) {
     exit;
@@ -21,10 +21,7 @@ final class BRO_WPA_REST_API {
             array(
                 'methods'  => WP_REST_Server::READABLE,
                 'callback' => array(__CLASS__, 'status'),
-                'permission_callback' => array(
-                    'BRO_WPA_Auth',
-                    'permission_check'
-                ),
+                'permission_callback' => '__return_true',
             )
         );
     }
